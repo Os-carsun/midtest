@@ -10,7 +10,7 @@ if(isset($_POST['date'])){
   $y = substr($date,0,4);
   $m = substr($date,5,-3);
   $d = substr($date,8);
-  if(mktime(0,0,0,$m,$d,$y)!=false){
+  if(date("d",mktime(0,0,0,$m,$d,$y))==$d){
     switch ($m) {
       case '01':
         if($d<21)
